@@ -48,4 +48,14 @@ class Validator
         }
         return $ip;
     }
+
+    function validateASN($str_search) {
+        if((substr($str_search,0,2)=="AS")&&(is_int((int)substr($str_search,-3,3)))){
+            return $str_search;
+        }
+        return false;
+    }
+
+    
+
 }
